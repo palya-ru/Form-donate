@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/main.css">
+    <title>Donate form</title>
+</head>
+<body>
+    <div class="formBlock">
+        <div class="currentBlock">
+            <div class="currentBlock-choice">
+                <label>
+                    <input class="visually-hidden check" type="radio" name="current">
+                    <span class="headBlock">Разовое</span>
+                </label>
+            </div>
+            <div class="currentBlock-choice">
+                <label>
+                    <input class="visually-hidden check" type="radio" name="current" data-current="">
+                    <span class="headBlock">Ежемесячное</span>
+                </label>
+            </div>
+        </div>
+        <div class="priceForm">
+            <table class="priceForm-table">
+                <tr>
+                    <td>
+                        <label>
+                            <input class="visually-hidden check" type="radio" name="price">
+                            <span class="headBlock">100<span class="ruble">&nbsp;</span></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input class="visually-hidden check" type="radio" name="price">
+                            <span class="headBlock">200<span class="ruble">&nbsp;</span></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input class="visually-hidden check" type="radio" name="price">
+                            <span class="headBlock">500<span class="ruble">&nbsp;</span></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            <input class="visually-hidden check" type="radio" name="price">
+                            <span class="headBlock">1000<span class="ruble">&nbsp;</span></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input class="visually-hidden check" type="radio" name="price">
+                            <span class="headBlock">1500<span class="ruble">&nbsp;</span></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input class="visually-hidden check" type="radio" name="price">
+                            <span class="headBlock">2500<span class="ruble">&nbsp;</span></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            <input class="visually-hidden check" type="radio" name="price">
+                            <span class="headBlock">1000<span class="ruble">&nbsp;</span></span>
+                        </label>
+                    </td>
+                    <td colspan="2">
+                        <label>
+                            <input class="check-current" type="text" value="" placeholder="Другая сумма">
+                            <small></small>
+                        </label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="donateInfo">
+            <div class="donateInfo-group">
+                <label>
+                    <span>Имя</span>
+                    <input type="text" class="donateInfo-input" name="name" placeholder="Как вас зовут" data-required="">
+                </label>
+            </div>
+            <div class="donateInfo-group">
+                <label>
+                    <span>Фамилия</span>
+                    <input type="text" class="donateInfo-input" name="surname" placeholder="Какая у вас фамилия">
+                </label>
+            </div>
+            <div class="donateInfo-group">
+                <label>
+                    <span>E-mail</span>
+                    <input type="text" class="donateInfo-input" name="email" placeholder="Ваш E-mail">
+                </label>
+            </div>
+            <div class="donateInfo-group">
+                <label>
+                    <span>Телефон</span>
+                    <input type="text" class="donateInfo-input" name="tel" placeholder="Номер телефона">
+                </label>
+            </div>
+            <div class="donateInfo-group">
+                <label>
+                    <span>Коментарий</span>
+                    <textarea placeholder="Коментарий" name="message"></textarea>
+                </label>
+            </div>
+        </div>
+        <div class="checked">
+            <div class="checked-group">
+                <label>
+                    <small class="checked-info">Согласен с <a target="_blank" href="#">офертой</a></small>
+                    <input type="checkbox" class="visually-hidden checkbox" checked>
+                    <span class="check"></span>
+                </label>
+            </div>
+            <div class="checked-group">
+                <label>
+                    <small class="checked-info">Даю согласие на обработку персональных данных </small>
+                    <input type="checkbox" class="visually-hidden checkbox" checked>
+                    <span class="check"></span>
+                </label>
+            </div>
+            <small class="checkError"></small>
+        </div>
+        <button type="submit" class="btn">Отправить</button>
+    </div>
+<script src="main.js"></script>
+</body>
+</html>

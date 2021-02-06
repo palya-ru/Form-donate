@@ -1,0 +1,186 @@
+.formBlock{
+  max-width: 21.875rem;
+  margin: 0 auto;
+}
+.currentBlock{
+  display: table;
+  width: 100%;
+  background-color: rgba($color, 0.1%);
+  &-choice{
+    display: table-cell;
+    width: 50%;
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+.headBlock{
+  display: block;
+  padding: 1rem 0;
+  cursor: pointer;
+  font-size: 1rem;
+  &::selection{
+    background-color: transparent;
+  }
+}
+.check-current{
+  display: block;
+  border: none;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.97rem 0;
+  color: $fontColor;
+}
+.check:checked + .headBlock{
+  @include bg;
+}
+.check:focus + .headBlock, .check-current:focus{
+  @include outline;
+}
+.priceForm{
+  margin: 1.875rem 0;
+  &-table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  &-table td{
+    position: relative;
+    width: 33%;
+    padding: 0;
+    @include border;
+  }
+}
+.donateInfo{
+  &-group{
+    margin-bottom: 1rem;
+  }
+  &-group textarea{
+    width: 100%;
+    padding: 0.625rem;
+    border-radius: 5px;
+    resize: none;
+    @include border;
+    margin-top: 0.25rem;
+  }
+  &-group textarea:focus{
+    @include outline;
+  }
+  &-input{
+    display: block;
+    width: 100%;
+    margin-top: 0.25rem;
+    @include border;
+    border-radius: 5px;
+    padding: 0.625rem;
+    font-size: 1rem;
+  }
+  &-input:focus{
+    @include outline;
+  }
+}
+
+
+.ruble::after{
+  content: '\20BD';
+}
+
+.check{
+  width: 20px;
+  height: 20px;
+  border: 2px solid $color;
+  border-radius: 3px;
+  display: block;
+  position: absolute;
+  top: -3px;
+  left: 0;
+}
+.checked{
+  &-group{
+    position: relative;
+  }
+  &-group a{
+    font-weight: bold;
+    color: $color;
+  }
+  &-group a:visited{
+    color: $color;;
+  }
+  &-group a:hover{
+    color: lighten($color, 10%);
+  }
+  &-group a:active{
+    color: $error;
+  }
+
+
+  &-info{
+    margin-left: 23px;
+  }
+  &-info::selection{
+    background-color: transparent;
+  }
+}
+.checked > .checked-group + .checked-group{
+  margin-top: 1rem;
+}
+
+.checkbox:checked + .check{
+  background-color: $yellow;
+}
+.checkbox:focus + .check{
+  box-shadow: 0 0 1px 1px $yellow, 0 0 1px 2px $yellow;
+}
+.checkbox:checked + .check::after{
+  content: '\2714';
+  color: $color;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 0;
+}
+.checkbox:disabled + .check{
+  border: 2px solid $fontColor;
+  background-color: $brown;
+}
+
+.btn{
+  display: block;
+  width: 100%;
+  border: none;
+  color: #000000;
+  background-color: $yellow;
+  border-radius: 3px;
+  transition: background-color ease-out 0.5s;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.btn:focus{
+  @include outline;
+}
+.btn:hover{
+  @include hoverBgc;
+}
+
+.errorBlock{
+  @include errorBg;
+}
+.errorMessage{
+  position: absolute;
+  font-size: 0.75rem;
+  color: $error;
+  bottom: -17px;
+  left: 0;
+  width: 100%;
+}
+.errorBorder{
+  border: 1px solid $error;
+}
+.checkError{
+  display: block;
+  margin-top: 0.3125rem;
+  color: $error;
+}
